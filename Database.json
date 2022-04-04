@@ -1,0 +1,193 @@
+{
+    "name": "Forms",
+    "tables": [
+        {
+            "name": "FieldTypes",
+            "isEnum": true,
+            "enumItems": [
+                {
+                    "key": "Text",
+                    "value": 1
+                },
+                {
+                    "key": "SingleChoice",
+                    "value": 2
+                },
+                {
+                    "key": "Numeric",
+                    "value": 3
+                },
+                {
+                    "key": "LongText",
+                    "value": 4
+                },
+                {
+                    "key": "Date",
+                    "value": 5
+                },
+                {
+                    "key": "MultiChoice",
+                    "value": 6
+                },
+                {
+                    "key": "File",
+                    "value": 7
+                },
+                {
+                    "key": "MultipleFiles",
+                    "value": 8
+                },
+                {
+                    "key": "Boolean",
+                    "value": 9
+                }
+            ]
+        },
+        {
+            "name": "Forms",
+            "hasGuid": true,
+            "hasKey": true,
+            "columns": [
+                {
+                    "name": "Name"
+                },
+                {
+                    "name": "Title"
+                },
+                {
+                    "name": "Description"
+                }
+            ]
+        },
+        {
+            "name": "Fields",
+            "hasOrder": true,
+            "columns": [
+                {
+                    "name": "FormId",
+                    "cascadeDelete": true
+                },
+                {
+                    "name": "Key"
+                },
+                {
+                    "name": "FieldTypeId"
+                },
+                {
+                    "name": "Label"
+                },
+                {
+                    "name": "IsRequired"
+                },
+                {
+                    "name": "Regex"
+                },
+                {
+                    "name": "DefaultValue"
+                },
+                {
+                    "name": "Hint"
+                },
+                {
+                    "name": "Icon"
+                },
+                {
+                    "name": "Direction"
+                }
+            ],
+            "indexes": [
+                {
+                    "columns": [
+                        "FormId",
+                        "Key"
+                    ],
+                    "isUnique": true
+                }
+            ]
+        },
+        {
+            "name": "FieldChoices",
+            "columns": [
+                {
+                    "name": "FieldId",
+                    "cascadeDelete": true
+                },
+                {
+                    "name": "Choice"
+                }
+            ],
+            "indexes": [
+                {
+                    "columns": [
+                        "FieldId",
+                        "Choice"
+                    ],
+                    "isUnique": true
+                }
+            ]
+        },
+        {
+            "name": "Notifications",
+            "oneToOneWith": "Forms",
+            "columns": [
+                {
+                    "name": "SendEmail"
+                },
+                {
+                    "name": "EmailsCsv"
+                },
+                {
+                    "name": "SendSms"
+                },
+                {
+                    "name": "PhoneNumbersCsv"
+                }
+            ]
+        },
+        {
+            "name": "SavedForms",
+            "columns": [
+                {
+                    "name": "FormId",
+                    "cascadeDelete": true
+                },
+                {
+                    "name": "Date"
+                }
+            ]
+        },
+        {
+            "name": "SavedFields",
+            "columns": [
+                {
+                    "name": "SavedFormId",
+                    "cascadeDelete": true
+                },
+                {
+                    "name": "FieldId",
+                    "cascadeDelete": true
+                },
+                {
+                    "name": "Value"
+                }
+            ],
+            "indexes": [
+                {
+                    "columns": [
+                        "SavedFormId",
+                        "FieldId"
+                    ],
+                    "isUnique": true
+                }
+            ]
+        },
+        {
+            "name": "SavedFormJsons",
+            "columns": [
+                {
+                    "name": "Json"
+                }
+            ]
+        }
+    ]
+}
