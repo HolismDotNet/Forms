@@ -17,15 +17,17 @@ public class Field : IEntity, IKey, IOrder
 
     public string Label { get; set; }
 
+    public string Placeholder { get; set; }
+
+    public string Hint { get; set; }
+
+    public string Icon { get; set; }
+
     public string IsRequired { get; set; }
 
     public string Regex { get; set; }
 
     public string DefaultValue { get; set; }
-
-    public string Hint { get; set; }
-
-    public string Icon { get; set; }
 
     public string Direction { get; set; }
 

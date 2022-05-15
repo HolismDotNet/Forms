@@ -55,7 +55,8 @@
                     "name": "Title"
                 },
                 {
-                    "name": "Description"
+                    "name": "Description",
+                    "isNullable": true
                 }
             ]
         },
@@ -74,25 +75,36 @@
                     "name": "FieldTypeId"
                 },
                 {
-                    "name": "Label"
+                    "name": "Label",
+                    "isNullable": true
                 },
                 {
-                    "name": "IsRequired"
+                    "name": "Placeholder",
+                    "isNullable": true
                 },
                 {
-                    "name": "Regex"
+                    "name": "Hint",
+                    "isNullable": true
                 },
                 {
-                    "name": "DefaultValue"
+                    "name": "Icon",
+                    "isNullable": true
                 },
                 {
-                    "name": "Hint"
+                    "name": "IsRequired",
+                    "isNullable": true
                 },
                 {
-                    "name": "Icon"
+                    "name": "Regex",
+                    "isNullable": true
                 },
                 {
-                    "name": "Direction"
+                    "name": "DefaultValue",
+                    "isNullable": true
+                },
+                {
+                    "name": "Direction",
+                    "isNullable": true
                 }
             ],
             "indexes": [
