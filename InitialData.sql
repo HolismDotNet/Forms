@@ -1,5 +1,5 @@
-insert ignore into Forms.Forms(`Key`, Name, Title)
-values ('ContactUs', N'Contact Us', N'Contact Us');
+insert ignore into Forms.Forms(`Key`, Name, Title, Description)
+values ('ContactUs', N'Contact Us', N'Contact Us', 'Contact us about anything. We would gladly hear it from you.');
 
 select Id into @formId
 from Forms.Forms
