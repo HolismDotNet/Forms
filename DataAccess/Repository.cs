@@ -18,11 +18,27 @@ public class Repository
         }
     }
 
+    public static Write<Forms.FieldView> FieldView
+    {
+        get
+        {
+            return new Write<Forms.FieldView>(new FormsContext());
+        }
+    }
+
     public static Write<Forms.Form> Form
     {
         get
         {
             return new Write<Forms.Form>(new FormsContext());
+        }
+    }
+
+    public static Write<Forms.FormView> FormView
+    {
+        get
+        {
+            return new Write<Forms.FormView>(new FormsContext());
         }
     }
 

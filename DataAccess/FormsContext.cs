@@ -8,7 +8,11 @@ public class FormsContext : DatabaseContext
 
     public DbSet<Forms.Field> Fields { get; set; }
 
+    public DbSet<Forms.FieldView> FieldViews { get; set; }
+
     public DbSet<Forms.Form> Forms { get; set; }
+
+    public DbSet<Forms.FormView> FormViews { get; set; }
 
     public DbSet<Forms.Notification> Notifications { get; set; }
 

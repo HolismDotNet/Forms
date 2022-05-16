@@ -92,6 +92,7 @@
                 },
                 {
                     "name": "IsRequired",
+                    "type": "boolean",
                     "isNullable": true
                 },
                 {
@@ -204,26 +205,39 @@
     ],
     "views": [
         {
+            "name": "FormViews",
+            "query": [
+                "select",
+                "    *,",
+                "    (",
+                "        select count(*)",
+                "        from Fields",
+                "        where FormId = Forms.Id",
+                "    ) as FieldsCount",
+                "from Forms"
+            ]
+        },
+        {
             "name": "FieldViews",
             "query": [
-                select 
-                f.Id,
-                FormId,
-                f.`Key`,
-                FieldTypeId,
-                Label,
-                Placeholder,
-                Hint,
-                Icon,
-                IsRequired,
-                Regex,
-                DefaultValue,
-                Direction,
-                f.`Order`,
-                ft.`Key` as Type
-                from Fields f
-                inner join FieldTypes ft
-                on f.FieldTypeId = ft.Id                
+                "select",
+                "    f.Id,",
+                "    FormId,",
+                "    f.`Key`,",
+                "    FieldTypeId,",
+                "    Label,",
+                "    Placeholder,",
+                "    Hint,",
+                "    Icon,",
+                "    IsRequired,",
+                "    Regex,",
+                "    DefaultValue,",
+                "    Direction,",
+                "    f.`Order`,",
+                "    ft.`Key` as Type",
+                "from Fields f",
+                "inner join FieldTypes ft",
+                "on f.FieldTypeId = ft.Id"
             ]
         }
     ]

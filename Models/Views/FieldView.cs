@@ -1,8 +1,8 @@
 namespace Forms;
 
-public class Field : IEntity, IKey, IOrder
+public class FieldView : IEntity, IKey, IOrder
 {
-    public Field()
+    public FieldView()
     {
         RelatedItems = new ExpandoObject();
     }
@@ -32,6 +32,8 @@ public class Field : IEntity, IKey, IOrder
     public string Direction { get; set; }
 
     public long Order { get; set; }
+
+    public string Type { get; set; }
 
     public dynamic RelatedItems { get; set; }
 }
