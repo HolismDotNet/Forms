@@ -6,6 +6,12 @@ public class FieldBusiness : Business<FieldView, Field>
 
     protected override Write<Field> Write => Forms.Repository.Field;
 
+    public List<FieldView> GetFields(long formId)
+    {
+        var fields = GetList(i => i.FormId == formId);
+        return fields;
+    }
+
     public FieldView ToggleIsRequired(long id)
     {
         var field = Write.Get(id);
