@@ -1,8 +1,8 @@
 namespace Forms;
 
-public class SavedForm : IEntity
+public class SavedFormView : IEntity, IKey
 {
-    public SavedForm()
+    public SavedFormView()
     {
         RelatedItems = new ExpandoObject();
     }
@@ -14,6 +14,14 @@ public class SavedForm : IEntity
     public DateTime UtcDate { get; set; }
 
     public bool? Seen { get; set; }
+
+    public string Key { get; set; }
+
+    public string Title { get; set; }
+
+    public long? FieldsCount { get; set; }
+
+    public long? SavedFieldsCount { get; set; }
 
     public dynamic RelatedItems { get; set; }
 }

@@ -58,6 +58,14 @@ public class Repository
         }
     }
 
+    public static Write<Forms.SavedFieldView> SavedFieldView
+    {
+        get
+        {
+            return new Write<Forms.SavedFieldView>(new FormsContext());
+        }
+    }
+
     public static Write<Forms.SavedFormJson> SavedFormJson
     {
         get
@@ -71,6 +79,14 @@ public class Repository
         get
         {
             return new Write<Forms.SavedForm>(new FormsContext());
+        }
+    }
+
+    public static Write<Forms.SavedFormView> SavedFormView
+    {
+        get
+        {
+            return new Write<Forms.SavedFormView>(new FormsContext());
         }
     }
 }

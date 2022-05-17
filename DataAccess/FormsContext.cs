@@ -18,9 +18,13 @@ public class FormsContext : DatabaseContext
 
     public DbSet<Forms.SavedField> SavedFields { get; set; }
 
+    public DbSet<Forms.SavedFieldView> SavedFieldViews { get; set; }
+
     public DbSet<Forms.SavedFormJson> SavedFormJsons { get; set; }
 
     public DbSet<Forms.SavedForm> SavedForms { get; set; }
+
+    public DbSet<Forms.SavedFormView> SavedFormViews { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

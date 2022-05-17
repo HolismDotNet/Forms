@@ -166,6 +166,11 @@
                 },
                 {
                     "name": "Date"
+                },
+                {
+                    "name": "Seen",
+                    "type": "boolean",
+                    "isNullable": true
                 }
             ]
         },
@@ -238,6 +243,43 @@
                 "from Fields f",
                 "inner join FieldTypes ft",
                 "on f.FieldTypeId = ft.Id"
+            ]
+        },
+        {
+            "name": "SavedFormViews",
+            "query": [
+                "select",
+                "    sf.*,",
+                "    fv.`Key`,",
+                "    fv.Title,",
+                "    fv.FieldsCount,",
+                "    (",
+                "        select count(*)",
+                "        from SavedFields",
+                "        where SavedFormId = sf.Id",
+                "    ) as SavedFieldsCount",
+                "from SavedForms sf",
+                "inner join FormViews fv",
+                "on sf.FormId = fv.Id"
+            ]
+        },
+        {
+            "name": "SavedFieldViews",
+            "query": [
+                "select",
+                "    sf.*,",
+                "    (",
+                "        case",
+                "        when fv.Label is not null",
+                "        then fv.Label",
+                "        when fv.Placeholder is not null",
+                "        then fv.Placeholder",
+                "        else fv.`Key`",
+                "        end",
+                "    ) as Title",
+                "from SavedFields sf",
+                "inner join FieldViews fv",
+                "on sf.FieldId = fv.Id"
             ]
         }
     ]
