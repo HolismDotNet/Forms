@@ -56,7 +56,7 @@
                 },
                 {
                     "name": "Description",
-                    "isNullable": true
+                    "nullable": true
                 }
             ]
         },
@@ -76,36 +76,36 @@
                 },
                 {
                     "name": "Label",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "Placeholder",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "Hint",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "Icon",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "IsRequired",
                     "type": "boolean",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "Regex",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "DefaultValue",
-                    "isNullable": true
+                    "nullable": true
                 },
                 {
                     "name": "Direction",
-                    "isNullable": true
+                    "nullable": true
                 }
             ],
             "indexes": [
@@ -170,7 +170,7 @@
                 {
                     "name": "Seen",
                     "type": "boolean",
-                    "isNullable": true
+                    "nullable": true
                 }
             ]
         },
