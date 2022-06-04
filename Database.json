@@ -114,7 +114,7 @@
                         "FormId",
                         "Key"
                     ],
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         },
@@ -135,7 +135,7 @@
                         "FieldId",
                         "Choice"
                     ],
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         },
@@ -195,7 +195,7 @@
                         "SavedFormId",
                         "FieldId"
                     ],
-                    "isUnique": true
+                    "unique": true
                 }
             ]
         },
